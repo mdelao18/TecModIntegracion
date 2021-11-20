@@ -1,11 +1,14 @@
-import LoginPage from '../pageobjects/login.page';
-import AuthPage from '../pageobjects/auth.page';
+import LoginPage from  '../pageobjects/login.page';
+import SecurePage from '../pageobjects/secure.page';
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
-        await LoginPage.login('admin', 'admin');
-        await expect(AuthPage.getTitle).toBeExisting();
-        await expect(AuthPage.getTitle).toHaveTextContaining('Basic Auth');
+        await LoginPage.open();
+
+        await LoginPage.login('tomsmith', 'SuperSecretPassword!');
+        await expect(SecurePage.flashAlert).toBeExisting();
+        await expect(SecurePage.flashAlert).toHaveTextContaining(
+            'You logged into a secure area!');
     });
 });
 
