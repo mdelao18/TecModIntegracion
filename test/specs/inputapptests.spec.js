@@ -28,4 +28,14 @@ describe('Inputs page with Number textbox', () => {
         console.log('3 test');
         await expect(InputPage.getParagraph).toHaveTextContaining('Number');
     });
+    it('Should get number 1 with one arrow up', async () => {
+        console.log('4 test');
+        await InputPage.addNumberArrowUp();
+        expect(InputPage.getNumberTextBox).toHaveTextContaining(1);
+    });
+    it('Should get number -1 with one arrow down', async () => {
+        console.log('5 test');
+        await InputPage.addNumberArrowUp();
+        expect(InputPage.getNumberTextBox).toHaveTextContaining(-1);
+    });
 });
