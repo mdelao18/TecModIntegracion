@@ -19,6 +19,14 @@ class InputPage extends Page {
     addNumberManually(){
         return this.getNumberTextBox.setValue(5);
     }
+
+    addNumberArrowUp(){
+        return this.getNumberTextBox.setValue('38');
+    }
+
+    addNumberArrowUDown(){
+        return this.getNumberTextBox.setValue('40');
+    }
 }
 
 export default new InputPage();
