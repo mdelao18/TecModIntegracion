@@ -21,11 +21,11 @@ class InputPage extends Page {
     }
 
     addNumberArrowUp(){
-        return this.getNumberTextBox.setValue('38');
+        return this.getNumberTextBox.setValue('{38}');
     }
 
     addNumberArrowUDown(){
-        return this.getNumberTextBox.setValue('40');
+        return this.getNumberTextBox.setValue('{40}');
     }
 }
 
