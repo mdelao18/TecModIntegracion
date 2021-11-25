@@ -26,4 +26,4 @@ class FormLogin extends Page {
     }
 }
 
-export default new FormLogin(); 
+export default new FormLogin();
