@@ -151,8 +151,30 @@ exports.config = {
          * only take screenshot if assertion failed
          */
          if(!passed) {
-            browser.saveScreenshot('assertionError.png');
+                       // browser.saveScreenshot('assertionError1.png');
+                       browser.saveScreenshot('assertValidationTest' + '_' + Math.floor((Math.random() * 100) + 1) +'.png');
         }
+
+                    //Intentos
+            //browser.url(`https://the-internet.herokuapp.com/${path}`).saveScreenshot('assertValidationTest' + Math.floor((Math.random() * 100) + 1) +'.png');
+            //browser.baseUrl(`https://the-internet.herokuapp.com/${path}`).saveScreenshot('assertValidationTest_' + `${path}`+'_'+Math.floor((Math.random() * 100) + 1) +'.png');
+            //browser.url(`https://the-internet.herokuapp.com/${path}`);
+            //browser.saveScreenshot('assertValidationTest_' + `${path}`+'_'+Math.floor((Math.random() * 100) + 1) +'.png');
+            //browser.saveScreenshot('assertValidationTest2_' + getTitle() +'_'+Math.floor((Math.random() * 100) + 1) +'.png');
+            //browser.saveScreenshot('assertValidationTest_3' + `${path}`+'_'+Math.floor((Math.random() * 100) + 1) +'.png');
+            //browser.saveScreenshot('assertValidationTest_4' +'_'+ browser.url(`/${path}` + '_'+ Math.floor((Math.random() * 100) + 1) +'.png');
+
+           /* const header = $('h3');
+            //browser.saveScreenshot('assertValidationTest_5' +'_'+ header.getText() + '_'+ Math.floor((Math.random() * 100) + 1) +'.png');*/
+
+           /* const p  = `${path}`;
+           browser.saveScreenshot('assertValidationTest_6' +'_'+ p + '_'+ Math.floor((Math.random() * 100) + 1) +'.png');*/
+
+            /*const p  = path;
+            browser.saveScreenshot('assertValidationTest_7' +'_'+ p + '_'+ Math.floor((Math.random() * 100) + 1) +'.png');*/
+
+           /* const header = $('h3');
+            browser.saveScreenshot('assertValidationTest_9' +'_'+ header + '_'+ Math.floor((Math.random() * 100) + 1) +'.png');*/
         }
     },
     
